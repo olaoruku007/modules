@@ -92,8 +92,8 @@ resource "aws_launch_configuration" "instance-lc-asg" {
 resource "aws_autoscaling_group" "pro-asg" {
   launch_configuration = aws_launch_configuration.instance-lc-asg.name
 
-  min_size = 2
-  max_size = 2
+  min_size = 3
+  max_size = 3
 
   vpc_zone_identifier = data.aws_subnets.default.ids
 
